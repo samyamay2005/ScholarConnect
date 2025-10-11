@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScholarConnect - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script defer src="js/dashboard.js"></script>
+  <link rel="icon" href="assets/icons/logo.png">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/icons/logo.png" alt="ScholarConnect logo">
+      <h1>ScholarConnect</h1>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="search.html">Scholarships</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="discovery.html">Discovery</a>
+      <a href="admin.html">Admin</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-page">
+    <h2>Welcome, Student!</h2>
+
+    <section class="applied-scholarships card">
+      <h3>Applied Scholarships</h3>
+      <ul id="appliedList">
+        <!-- Dynamically filled -->
+      </ul>
+    </section>
+
+    <section class="upcoming-exams card">
+      <h3>Upcoming Scholarship Exams</h3>
+      <ul id="examList">
+        <!-- Dynamically filled -->
+      </ul>
+    </section>
+
+    <section class="scholarship-calendar card">
+      <h3>Scholarship Deadlines Calendar</h3>
+      <table id="calendar">
+        <!-- Dynamically filled -->
+      </table>
+    </section>
+  </main>
+  <button class="btn" id="logoutBtn">Logout</button>
+
+  <footer>
+    <p>© 2025 ScholarConnect.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.dashboard-page {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.dashboard-page h2 {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Calendar */
+#calendar {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#calendar th, #calendar td {
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+}
+
+#calendar th {
+  background: var(--accent);
+  color: white;
+}
+
+#calendar td.deadline {
+  background: #fde68a; /* yellow highlight for deadlines */
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 0 0.5rem;
+  }
+}

@@ -1,0 +1,175 @@
+/* Forum Container */
+.forum-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.forum-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.forum-desc {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Create Post Button */
+.create-btn {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+/* Post Cards */
+.post-list .post {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+
+.post-content {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Post Actions */
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-actions button {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Reply Box */
+.reply-box {
+  margin-top: 1rem;
+}
+
+.reply-box textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.reply-box button {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Replies Display */
+.replies {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.reply {
+  background: #f3f4f6;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* Hidden Utility Class */
+.hidden {
+  display: none;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-content textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+/* Create Post Form */
+#createPostForm {
+  margin-bottom: 1.5rem;
+}
+
+#createPostForm input[type="text"],
+#createPostForm textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#createPostForm button {
+  margin-right: 0.5rem;
+}

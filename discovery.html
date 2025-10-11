@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScholarConnect - Discovery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/discovery.css">
+  <script defer src="js/discovery.js"></script>
+</head>
+<body>
+  <!-- ✅ Header (kept as requested) -->
+  <header>
+    <div class="logo">
+      <img src="assets/icons/logo.png" alt="ScholarConnect logo">
+      <h1>ScholarConnect</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="search.html">Scholarships</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="discovery.html" class="active">Discovery</a>
+      <a href="admin.html">Admin</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- ✅ Forum Section -->
+  <section class="forum-container">
+    <h2>Student Forum</h2>
+    <p class="forum-desc">Share your thoughts, ask questions, and connect with other students.</p>
+
+    <!-- ✅ Create Post Button -->
+    <button id="openPostModal" class="btn create-btn">+ Create Post</button>
+
+    <!-- ✅ Posts List -->
+    <div class="post-list">
+
+      <!-- ✅ Example Post -->
+      <div class="post card">
+        <h4 class="post-title">How to apply for the Inspire Scholarship?</h4>
+        <p class="post-meta">Posted by Ananya • 2 hours ago</p>
+        <p class="post-content">I'm confused about the eligibility criteria and documents...</p>
+
+        <div class="post-actions">
+          <button class="like-btn">👍 <span class="like-count">0</span></button>
+          <button class="reply-btn">💬 Reply</button>
+        </div>
+
+        <div class="reply-box hidden">
+          <textarea placeholder="Write a reply..."></textarea>
+          <button class="submit-reply">Post Reply</button>
+        </div>
+
+        <div class="replies"></div>
+      </div>
+
+      <!-- ✅ Another Example Post -->
+      <div class="post card">
+        <h4 class="post-title">Best scholarships after Class 12?</h4>
+        <p class="post-meta">Posted by Aarav • 5 hours ago</p>
+        <p class="post-content">Any suggestions for merit-based scholarships in India?</p>
+
+        <div class="post-actions">
+          <button class="like-btn">👍 <span class="like-count">0</span></button>
+          <button class="reply-btn">💬 Reply</button>
+        </div>
+
+        <div class="reply-box hidden">
+          <textarea placeholder="Write a reply..."></textarea>
+          <button class="submit-reply">Post Reply</button>
+        </div>
+
+        <div class="replies"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✅ Modal for Creating Posts -->
+  <section class="forum-container">
+  <h2>Student Forum</h2>
+  <p class="forum-desc">Share your thoughts, ask questions, and connect with other students.</p>
+
+  <!-- Create Post Button -->
+  <button id="togglePostForm" class="btn create-btn">+ Create Post</button>
+
+  <!-- Hidden Create Post Form -->
+  <div id="createPostForm" class="card hidden">
+    <input type="text" id="postTitle" placeholder="Post title">
+    <textarea id="postText" placeholder="What's on your mind?"></textarea>
+    <button id="submitPost" class="btn">Post</button>
+    <button id="cancelPost" class="btn btn-outline">Cancel</button>
+  </div>
+
+  <!-- Posts List -->
+  <div class="post-list">
+    <!-- Existing example posts go here (same as before) -->
+  </div>
+</section>
+
+  <!-- ✅ Optional Footer (kept as in your style.css) -->
+  <footer>
+    <p>&copy; 2025 ScholarConnect. All rights reserved.</p>
+  </footer>
+  <script src="js/discovery.js"></script>
+</body>
+</html>

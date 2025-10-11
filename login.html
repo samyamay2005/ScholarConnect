@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScholarConnect - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <script defer src="js/login.js"></script>
+  <link rel="icon" href="assets/icons/logo.png">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/icons/logo.png" alt="ScholarConnect logo">
+      <h1>ScholarConnect</h1>
+    </div>
+  </header>
+
+  <main class="login-page">
+    <div class="login-container card">
+      <h2>Welcome to ScholarConnect</h2>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="login">Login</button>
+        <button class="tab-btn" data-tab="signup">Sign Up</button>
+        <button class="tab-btn" data-tab="forgot">Forgot Password</button>
+        <button class="tab-btn" data-tab="admin">Admin Login</button>
+      </div>
+
+      <!-- Student Login -->
+      <div class="tab-content active" id="login">
+        <input type="email" id="studentEmail" placeholder="Email">
+        <input type="password" id="studentPassword" placeholder="Password">
+        <button class="btn" id="studentLoginBtn">Login</button>
+      </div>
+
+      <!-- Sign Up -->
+      <div class="tab-content" id="signup">
+        <input type="text" id="signupName" placeholder="Full Name">
+        <input type="email" id="signupEmail" placeholder="Email">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <input type="password" id="signupConfirmPassword" placeholder="Confirm Password">
+        <button class="btn" id="signupBtn">Sign Up</button>
+      </div>
+
+      <!-- Forgot Password -->
+      <div class="tab-content" id="forgot">
+        <input type="email" id="forgotEmail" placeholder="Enter your email">
+        <button class="btn" id="forgotBtn">Recover Password</button>
+      </div>
+
+      <!-- Admin Login -->
+      <div class="tab-content" id="admin">
+        <input type="text" id="adminUsername" placeholder="Username">
+        <input type="password" id="adminPassword" placeholder="Password">
+        <button class="btn" id="adminLoginBtn">Admin Login</button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 ScholarConnect.</p>
+  </footer>
+</body>
+</html>
