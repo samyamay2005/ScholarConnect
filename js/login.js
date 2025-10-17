@@ -1,27 +1,36 @@
-// Tab switching
 const tabs = document.querySelectorAll(".tab-btn");
 const contents = document.querySelectorAll(".tab-content");
 
 tabs.forEach(tab => {
   tab.addEventListener("click", () => {
-    // remove active from all tabs and contents
     tabs.forEach(t => t.classList.remove("active"));
     contents.forEach(c => c.classList.remove("active"));
 
-    // add active to selected
     tab.classList.add("active");
     const tabId = tab.getAttribute("data-tab");
     document.getElementById(tabId).classList.add("active");
+
+    // Autofocus first input
+    const firstInput = document.getElementById(tabId).querySelector("input");
+    if (firstInput) firstInput.focus();
   });
 });
 
+function togglePassword(id) {
+  const input = document.getElementById(id);
+  input.type = input.type === "password" ? "text" : "password";
+}
+
 // Demo login actions
+const STUDENT_KEY = "loggedInStudent";
+
 document.getElementById("studentLoginBtn").addEventListener("click", () => {
   const email = document.getElementById("studentEmail").value;
   const password = document.getElementById("studentPassword").value;
   if(email && password) {
+    localStorage.setItem(STUDENT_KEY, email);
     alert(`Logged in as student: ${email}`);
-    // Here you can set loggedIn = true for demo
+    window.location.href = "dashboard.html";
   } else {
     alert("Please fill in all fields");
   }
@@ -56,31 +65,6 @@ document.getElementById("adminLoginBtn").addEventListener("click", () => {
   const user = document.getElementById("adminUsername").value;
   const pass = document.getElementById("adminPassword").value;
   if(user && pass) {
-    alert(`Admin logged in: ${user}`);
-    // Redirect to admin dashboard for demo
-  } else {
-    alert("Please fill in all fields");
-  }
-});
-// Set a demo logged-in flag in localStorage
-const STUDENT_KEY = "loggedInStudent";
-
-document.getElementById("studentLoginBtn").addEventListener("click", () => {
-  const email = document.getElementById("studentEmail").value;
-  const password = document.getElementById("studentPassword").value;
-  if(email && password) {
-    localStorage.setItem(STUDENT_KEY, email); // store logged-in student
-    alert(`Logged in as student: ${email}`);
-    window.location.href = "dashboard.html"; // redirect to dashboard
-  } else {
-    alert("Please fill in all fields");
-  }
-});
-
-document.getElementById("adminLoginBtn").addEventListener("click", () => {
-  const user = document.getElementById("adminUsername").value;
-  const pass = document.getElementById("adminPassword").value;
-  if(user && pass) {
     localStorage.setItem("loggedInAdmin", user);
     alert(`Admin logged in: ${user}`);
     window.location.href = "admin.html";
@@ -88,9 +72,3 @@ document.getElementById("adminLoginBtn").addEventListener("click", () => {
     alert("Please fill in all fields");
   }
 });
-
-// Logout demo (optional)
-function logout() {
-  localStorage.removeItem(STUDENT_KEY);
-  localStorage.removeItem("loggedInAdmin");
-}

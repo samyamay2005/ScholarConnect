@@ -82,3 +82,22 @@ gpaFilter.addEventListener("change", filterScholarships);
 
 // Initial render
 renderScholarships(scholarships);
+// simple fetch with query params
+async function loadScholarships(query = {}) {
+  const params = new URLSearchParams(query).toString();
+  const res = await fetch(`http://localhost:5000/api/scholarships?${params}`);
+  const data = await res.json();
+  renderScholarships(data); // your existing renderer
+}
+async function applyScholarship(userId, scholarshipId) {
+  const res = await fetch('http://localhost:5000/api/applications', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId, scholarshipId })
+  });
+  const { applyUrl, application } = await res.json();
+  // store application info locally if you want
+  // redirect user to official apply page:
+  window.open(applyUrl, '_blank'); // opens provider link
+}
+
